@@ -9,7 +9,11 @@ export default {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        'node_modules/preline/dist/*.js',
+        './src/**/*.{html,js}',
     ],
+
+    darkMode: 'class',
 
     theme: {
         extend: {
@@ -19,5 +23,9 @@ export default {
         },
     },
 
-    plugins: [forms, typography],
+    plugins: [
+        forms, 
+        typography, 
+        require('@tailwindcss/forms'),
+        require('preline/plugin')],
 };
