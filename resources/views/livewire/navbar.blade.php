@@ -61,12 +61,24 @@
           <div>
             <a class="relative inline-block text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 dark:text-white" href="#" aria-current="page">Home</a>
           </div>
-          <div>
-            <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="#">What Is</a>
-          </div>
-          <div>
-            <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="#">About Me</a>
-          </div>
+          @if (Auth::user())
+            <div>
+              <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="#">History</a>
+            </div>
+            <div>
+              <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="#">Changelog</a>
+            </div>
+            <div>
+              <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="#">Profile</a>
+            </div>
+          @else
+            <div>
+              <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="#">What Is</a>
+            </div>
+            <div>
+              <a class="inline-block text-black hover:text-gray-600 dark:text-white dark:hover:text-neutral-300" href="#">About Me</a>
+            </div>
+          @endif
         </div>
       </div>
       <!-- End Collapse -->
