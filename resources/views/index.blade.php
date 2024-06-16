@@ -8,9 +8,8 @@
   @livewireStyles
 </head>
 <body>
-  <h1 class="text-7xl font-bold underline">
-    Hello world!
-  </h1>
+  @livewire('navbar')
+
   @livewireScripts
 </body>
 </html>
