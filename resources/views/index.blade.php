@@ -21,6 +21,7 @@
   <div class="dark:bg-gray-900">
     @livewire('navbar')
     @livewire('hero-section')
+    @livewire('info-section')
   </div>
 
   @livewireScripts
